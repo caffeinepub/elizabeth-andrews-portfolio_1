@@ -256,8 +256,8 @@ export default function FullPortfolio() {
           }}
         >
           Everything here has been written for a specific audience, with a
-          specific goal \u2014 whether that\u2019s ranking on page one,
-          converting a visitor, or telling a brand\u2019s story.
+          specific goal — whether that's ranking on page one, converting a
+          visitor, or telling a brand's story.
         </p>
       </div>
 
@@ -265,7 +265,7 @@ export default function FullPortfolio() {
         isEven={false}
         label="Technical SEO Blogs | Simple Logic IT"
         title="Technical SEO Articles"
-        context="Written for Simple Logic IT \u2014 a B2B managed services company serving enterprise clients across BFSI, FMCG, and government sectors. Each article was keyword-researched, audience-mapped, and structured for both readability and search performance."
+        context="Written for Simple Logic IT — a B2B managed services company serving enterprise clients across BFSI, FMCG, and government sectors. Each article was keyword-researched, audience-mapped, and structured for both readability and search performance."
         items={technicalBlogs}
       />
       <CategorySection
@@ -286,14 +286,14 @@ export default function FullPortfolio() {
         isEven={true}
         label="Cultural & Historical Long-Form | Rubani"
         title="Research-Backed Long-Form Blogs"
-        context="3\u20134 research-backed blogs per week, 1,000+ words each. Published original articles over 3 months."
+        context="3–4 research-backed blogs per week, 1,000+ words each. Published original articles over 3 months."
         items={culturalBlogs}
       />
       <CategorySection
         isEven={false}
         label="Personal Essays | Voice & Perspective"
         title="Personal Essays & Opinion Writing"
-        context="Intentional personal pieces showcasing emotional intelligence, distinct voice, and human connection \u2014 not just SEO."
+        context="Intentional personal pieces showcasing emotional intelligence, distinct voice, and human connection — not just SEO."
         items={personalEssays}
       />
     </section>

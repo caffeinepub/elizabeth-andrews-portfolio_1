@@ -323,9 +323,9 @@ export default function AboutSection() {
           Some people discover writing. I didn’t; writing discovered me.
         </div>
         {[
-          "Long before I understood what content strategy or brand voice meant, I was already putting words together in ways that made people stop and pay attention. It started young. A restlessness. A need to make sense of the world through sentences. What I didn\u2019t know then was that this wasn\u2019t just a hobby \u2014 it was a calling quietly taking root.",
-          "As I grew, so did my curiosity. I didn\u2019t want to write about just one thing. I wanted to understand everything. So I dived deep into industries, communities, and conversations most writers never bother to explore. Finance. Health and wellness. Tech real estate. Fashion. E-commerce. Each world had its own language, its own audience, its own pulse. And I am learning to speak all of them fluently.",
-          "That\u2019s what makes my work different. I don\u2019t just write \u2014 I research, immerse, and translate. I take complex ideas and make them feel human. I take overlooked stories and give them a voice. Whether I\u2019m writing for a startup founder, a wellness brand, or a corporate enterprise, the goal is always the same: words that connect, convert, and leave a lasting impression.",
+          "Long before I understood what content strategy or brand voice meant, I was already putting words together in ways that made people stop and pay attention. It started young. A restlessness. A need to make sense of the world through sentences. What I didn’t know then was that this wasn’t just a hobby — it was a calling quietly taking root.",
+          "As I grew, so did my curiosity. I didn’t want to write about just one thing. I wanted to understand everything. So I dived deep into industries, communities, and conversations most writers never bother to explore. Finance. Health and wellness. Tech real estate. Fashion. E-commerce. Each world had its own language, its own audience, its own pulse. And I am learning to speak all of them fluently.",
+          "That’s what makes my work different. I don’t just write — I research, immerse, and translate. I take complex ideas and make them feel human. I take overlooked stories and give them a voice. Whether I’m writing for a startup founder, a wellness brand, or a corporate enterprise, the goal is always the same: words that connect, convert, and leave a lasting impression.",
         ].map((para) => (
           <p
             key={para.slice(0, 20)}

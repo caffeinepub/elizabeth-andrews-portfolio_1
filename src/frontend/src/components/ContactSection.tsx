@@ -82,7 +82,7 @@ export default function ContactSection() {
             transition: "opacity 0.8s ease",
           }}
         >
-          Let\u2019s Work Together
+          Let's Work Together
         </h2>
         <p
           style={{
@@ -97,9 +97,8 @@ export default function ContactSection() {
           }}
         >
           Whether you need a technical blog that ranks, a service page that
-          converts, or a content strategy that scales \u2014 I\u2019m here for
-          it. I\u2019m currently open to full-time, freelance, and contract
-          opportunities.
+          converts, or a content strategy that scales — I'm here for it. I'm
+          currently open to full-time, freelance, and contract opportunities.
         </p>
 
         <div
@@ -162,9 +161,14 @@ export default function ContactSection() {
             type="button"
             data-ocid="contact.primary_button"
             className="btn-primary"
-            onClick={() => alert("Resume download coming soon!")}
+            onClick={() =>
+              window.open(
+                "https://downloadelizabethresume.linkyhost.com",
+                "_blank",
+              )
+            }
           >
-            \u2193 Download My Resume
+            ↓ Download My Resume
           </button>
         </div>
       </div>

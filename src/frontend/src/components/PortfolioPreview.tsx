@@ -5,12 +5,12 @@ const featuredWork = [
     category: "Technical SEO Blog",
     title: "How to Choose the Right Middleware Technology for Banks",
     context:
-      "Written for Simple Logic IT, a B2B managed services company serving enterprise clients across BFSI, FMCG, and government sectors. Each article was keyword\u2011researched, audience\u2011mapped, and structured for both readability and search performance.",
+      "Written for Simple Logic IT, a B2B managed services company serving enterprise clients across BFSI, FMCG, and government sectors. Each article was keyword‑researched, audience‑mapped, and structured for both readability and search performance.",
     url: "https://v1.simplelogic-it.com/middleware-technology-for-bank/",
   },
   {
     category: "Website Service Page",
-    title: "Cloud Managed Services \u2014 Simple Logic IT",
+    title: "Cloud Managed Services — Simple Logic IT",
     context:
       "Part of a full website revamp covering 5 product lines and 40+ pages. Written for on-page SEO, conversion, and technical clarity.",
     url: "https://simplelogic-it.com/cloud-managed-services/",
@@ -19,7 +19,7 @@ const featuredWork = [
     category: "Research-Backed Blog",
     title: "The Teachings of Guru Nanak Dev Ji: A Path to Enlightenment",
     context:
-      "3 to 4 research\u2011backed blogs per week, 1,000+ words each. Published original articles over 3 months.",
+      "3 to 4 research‑backed blogs per week, 1,000+ words each. Published original articles over 3 months.",
     url: "https://drive.google.com/file/d/15nJDjC9kLGerpX1M9LNkoynQ3U0zt_Zw/view?usp=sharing",
   },
 ];
@@ -250,7 +250,7 @@ function PortfolioCard({
           }}
           onClick={(e) => e.stopPropagation()}
         >
-          Read Article \u2192
+          Read Article →
         </a>
       </div>
     </div>
@@ -285,7 +285,7 @@ export default function PortfolioPreview() {
             transition: "opacity 0.6s ease",
           }}
         >
-          From the blog to the website \u2014 here\u2019s what I\u2019ve built
+          From the blog to the website — here's what I've built
         </h2>
         <div
           style={{
@@ -310,7 +310,7 @@ export default function PortfolioPreview() {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            \u2192 View Full Portfolio
+            → View Full Portfolio
           </button>
         </div>
       </div>
