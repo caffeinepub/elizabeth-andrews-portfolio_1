@@ -30,6 +30,16 @@ function FloatingStar({ index }: { index: number }) {
   );
 }
 
+function downloadResume() {
+  const a = document.createElement("a");
+  a.href =
+    "/assets/final_resume_2_1_3_2-019d3e76-7f7d-718f-8bc7-fec2ce0fa7fe.pdf";
+  a.download = "Elizabeth-Andrews-Resume.pdf";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
 export default function ContactSection() {
   const { ref, isVisible } = useIntersectionObserver(0.1);
 
@@ -161,12 +171,7 @@ export default function ContactSection() {
             type="button"
             data-ocid="contact.primary_button"
             className="btn-primary"
-            onClick={() =>
-              window.open(
-                "https://downloadelizabethresume.linkyhost.com",
-                "_blank",
-              )
-            }
+            onClick={downloadResume}
           >
             ↓ Download My Resume
           </button>

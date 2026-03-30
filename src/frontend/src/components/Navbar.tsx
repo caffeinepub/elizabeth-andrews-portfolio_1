@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 
-interface Props {
-  isDark: boolean;
-  toggleDark: () => void;
-}
-
-export default function Navbar({ isDark, toggleDark }: Props) {
+export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -37,16 +32,14 @@ export default function Navbar({ isDark, toggleDark }: Props) {
         zIndex: 100,
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
-        backgroundColor: isDark
-          ? "rgba(26,26,26,0.92)"
-          : "rgba(245,241,235,0.92)",
+        backgroundColor: "rgba(26,26,26,0.92)",
         borderBottom: "1px solid rgba(122,139,111,0.3)",
         padding: "0 2rem",
         height: "72px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        transition: "background-color 0.5s ease, box-shadow 0.3s ease",
+        transition: "box-shadow 0.3s ease",
         boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.08)" : "none",
         overflow: "hidden",
       }}
@@ -74,7 +67,7 @@ export default function Navbar({ isDark, toggleDark }: Props) {
           fontFamily: "'Playfair Display', serif",
           fontSize: "1.5rem",
           fontWeight: 600,
-          color: isDark ? "var(--off-white)" : "var(--ink-black)",
+          color: "var(--off-white)",
           background: "none",
           border: "none",
           cursor: "none",
@@ -100,7 +93,7 @@ export default function Navbar({ isDark, toggleDark }: Props) {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "1rem",
-              color: isDark ? "var(--off-white)" : "var(--ink-black)",
+              color: "var(--off-white)",
               background: "none",
               border: "none",
               cursor: "none",
@@ -110,59 +103,6 @@ export default function Navbar({ isDark, toggleDark }: Props) {
             {link.label}
           </button>
         ))}
-
-        {/* Dark mode toggle */}
-        <button
-          type="button"
-          data-ocid="navbar.toggle"
-          onClick={toggleDark}
-          style={{
-            background: "none",
-            border: "none",
-            cursor: "none",
-            padding: "6px",
-            borderRadius: "50%",
-            transition: "background 0.2s ease",
-            color: isDark ? "var(--off-white)" : "var(--ink-black)",
-          }}
-          aria-label="Toggle dark mode"
-        >
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            style={{
-              transition: "transform 0.4s ease",
-              transform: isDark ? "rotate(180deg)" : "rotate(0deg)",
-            }}
-          >
-            {isDark ? (
-              <>
-                <circle cx="12" cy="12" r="5" />
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-              </>
-            ) : (
-              <path
-                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                fill="currentColor"
-                stroke="none"
-              />
-            )}
-          </svg>
-        </button>
       </div>
 
       {/* Mobile hamburger */}
@@ -190,7 +130,7 @@ export default function Navbar({ isDark, toggleDark }: Props) {
               display: "block",
               width: "24px",
               height: "2px",
-              background: isDark ? "var(--off-white)" : "var(--ink-black)",
+              background: "var(--off-white)",
               borderRadius: "2px",
               transition: "transform 0.3s ease, opacity 0.3s ease",
               transform: mobileOpen
@@ -215,7 +155,7 @@ export default function Navbar({ isDark, toggleDark }: Props) {
             right: 0,
             bottom: 0,
             width: "280px",
-            backgroundColor: isDark ? "#1A1A1A" : "#F5F1EB",
+            backgroundColor: "#1A1A1A",
             boxShadow: "-4px 0 20px rgba(0,0,0,0.15)",
             display: "flex",
             flexDirection: "column",
@@ -233,7 +173,7 @@ export default function Navbar({ isDark, toggleDark }: Props) {
               style={{
                 fontFamily: "'Playfair Display', serif",
                 fontSize: "1.5rem",
-                color: isDark ? "var(--off-white)" : "var(--ink-black)",
+                color: "var(--off-white)",
                 background: "none",
                 border: "none",
                 cursor: "none",
@@ -246,25 +186,6 @@ export default function Navbar({ isDark, toggleDark }: Props) {
               {link.label}
             </button>
           ))}
-          <button
-            type="button"
-            onClick={toggleDark}
-            style={{
-              marginTop: "1rem",
-              background: "none",
-              border: "1px solid var(--sage-green)",
-              borderRadius: "4px",
-              padding: "0.5rem 1rem",
-              color: isDark ? "var(--off-white)" : "var(--ink-black)",
-              cursor: "none",
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "0.8rem",
-              opacity: 0,
-              animation: "fadeUp 0.4s ease 0.4s forwards",
-            }}
-          >
-            {isDark ? "☀ Light Mode" : "☾ Dark Mode"}
-          </button>
         </div>
       )}
 

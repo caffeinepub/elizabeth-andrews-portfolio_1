@@ -11,25 +11,22 @@ import OrnamentalDivider from "./components/OrnamentalDivider";
 import PortfolioPreview from "./components/PortfolioPreview";
 import ServicesSection from "./components/ServicesSection";
 import StatsSection from "./components/StatsSection";
-import { useDarkMode } from "./hooks/useDarkMode";
 
 export default function App() {
-  const [isDark, toggleDark] = useDarkMode();
   const [loading, setLoading] = useState(true);
 
   return (
     <div
       style={{
         minHeight: "100vh",
-        backgroundColor: isDark ? "var(--ink-black)" : "var(--off-white)",
-        transition: "background-color 0.5s ease",
+        backgroundColor: "var(--ink-black)",
       }}
     >
       <CustomCursor />
       {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
       {!loading && (
         <>
-          <Navbar isDark={isDark} toggleDark={toggleDark} />
+          <Navbar />
           <main>
             <HeroSection />
             <OrnamentalDivider />
